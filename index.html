@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/063ef2466f.js" crossorigin="anonymous"></script>
+    <title>Type and speak</title>
+
+    <style>
+        body{
+            color: white;
+            background-color: #022a38;
+        }
+        img{
+            width: 140px;
+            height: 140px;
+        }
+        .custom-range::-webkit-slider-thumb {
+        background: #ec1337;
+        }
+
+        .custom-range::-moz-range-thumb {
+        background: #ec1337;
+        }
+
+        .custom-range::-ms-thumb {
+        background: #ec1337;
+        }
+        hr{
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+            left: 0;
+            background-color: #454e59;
+        }
+        .footer{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        a{
+            color: aliceblue;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        a:hover{
+            color: rgb(255, 173, 80);
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center mt-4">
+        <img src="surr-no-messages.png" class="mt-5 img-responsive">
+        <h1 class="mb-5">Text-<span class="text-warning">TO</span>-Speech</h1>
+        <div class="col-md-6 mx-auto">
+            <form>
+                <div class="form-group">
+                    <textarea name="" id="text-input" cols="30" rows="10" class="form-control-lg" placeholder="Type here..."></textarea>
+                </div>
+                <div class="form-group mt-5">
+                    <label for="rate">Rate</label>
+                    <div id="rate-value" class="badge badge-danger float-right">1</div>
+                    <input type="range" id='rate' class="custom-range" min="0.5" max="2" value="1" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label for="pitch">Pitch</label>
+                    <div id="pitch-value" class="badge badge-danger float-right">1</div>
+                    <input type="range" id='pitch' class="custom-range" min="0" max="2" value="1" step="0.1">
+                </div>
+                <div class="form-group mt-5">
+                    <select id="voice-select" class="form-control form-control-lg"></select>
+                </div>
+                <button class="btn btn-danger btn-block btn-lg mt-5">Speak</button>
+                <div class="float-right mt-2" style="color: darkgray; font-size: 14px;">Web Speech API</div>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="footer container">
+        <p>&copy No Copyright</p>
+        <p>Credits : <a
+                href='https://www.youtube.com/watch?v=ZORXxxP49G8&list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX&index=24&t=0s'>Brad
+                Traversy</a></p>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <script src="main.js"></script>
+</body>
+</html>
